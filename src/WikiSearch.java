@@ -14,12 +14,11 @@ public class WikiSearch {
             String encodedQuery = URLEncoder.encode(query, StandardCharsets.UTF_8);
             System.out.println("Запрос закодирован");
             String urlStr = "https://ru.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch=" + encodedQuery;
-
             URL url = new URL(urlStr);
             System.out.println("Создан url");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
-            conn.setRequestProperty("User-Agent", "WikiSearchBot/1.0 (https://example.com)");
+            conn.setRequestProperty("User-Agent", "Laba1_WikiSearchBot/1.0 (https://example.com)");
             BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             StringBuilder response = new StringBuilder();
             String line;
