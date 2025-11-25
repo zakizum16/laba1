@@ -59,15 +59,6 @@ public class WikiSearch {
             System.err.println("Ошибка: " + e.getMessage());
         }
     }
-
-    static class WikiResponse {
-        Query query;
-    }
-
-    static class Query {
-        List<SearchResult> search;
-    }
-
     static class SearchResult {
         int pageid;
         String title;
